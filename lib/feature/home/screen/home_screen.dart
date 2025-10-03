@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.circle,
-                border: Border.all(color: Color(0xFFEAEAEA)),
+                border: Border.all(color: Color(0xFFEAEAEA), width: 2),
               ),
               child: Center(
                 child: SvgPicture.asset(
@@ -122,8 +122,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          SizedBox(height: 12),
 
+          SizedBox(height: 12),
           SizedBox(
             height: 160,
             child: ListView.builder(
@@ -135,6 +135,8 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
+
+          SizedBox(height: 47),
         ],
       ),
     );
