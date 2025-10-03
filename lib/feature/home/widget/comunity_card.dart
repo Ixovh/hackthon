@@ -19,7 +19,7 @@ class CommunityCard extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 6,
-            offset:  Offset(0, 3),
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -32,7 +32,7 @@ class CommunityCard extends StatelessWidget {
                 radius: 18,
                 backgroundImage: AssetImage(post.avatar),
               ),
-               SizedBox(width: 8),
+              SizedBox(width: 8),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,20 +41,20 @@ class CommunityCard extends StatelessWidget {
                       children: [
                         Text(
                           post.name,
-                          style:  TextStyle(
+                          style: TextStyle(
                             fontFamily: 'SF',
                             fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Colors.black,
                           ),
                         ),
-                         SizedBox(width: 4),
+                        SizedBox(width: 4),
                         Image.asset(post.countryFlag, width: 18, height: 18),
                       ],
                     ),
                     Text(
                       post.timeAgo,
-                      style:  TextStyle(
+                      style: TextStyle(
                         fontFamily: 'SF',
                         fontSize: 12,
                         color: Colors.grey,
@@ -66,19 +66,46 @@ class CommunityCard extends StatelessWidget {
             ],
           ),
 
-           SizedBox(height: 10),
+          SizedBox(height: 10),
+          if (post.content.contains('.'))
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: post.content,
+                    style: TextStyle(
+                      fontFamily: 'SF',
+                      fontSize: 14,
+                      color: Colors.black,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
 
+                  TextSpan(
+                    text: ' more',
+                    style: TextStyle(
+                      fontFamily: 'SF',
+                      fontSize: 14,
+                      color: Color(0xFF2DBE62),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    onEnter: (event) {},
+                  ),
+                ],
+              ),
+            )
 
-          Text(
-            post.content,
-            style:  TextStyle(
-              fontFamily: 'SF',
-              fontSize: 14,
-              color: Colors.black,
+          else
+            Text(
+              post.content,
+              style: TextStyle(
+                fontFamily: 'SF',
+                fontSize: 14,
+                color: Colors.black,
+              ),
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis,
             ),
-            maxLines: 4,
-            overflow: TextOverflow.ellipsis,
-          ),
         ],
       ),
     );
