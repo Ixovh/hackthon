@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   smooth_page_indicator: ^1.2.1
   google_fonts: ^6.3.2
+  flutter_svg: ^2.2.1
 
 dev_dependencies:
   flutter_test:
@@ -60,8 +61,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
+    - assets/icons/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -79,9 +81,11 @@ flutter:
     - family: SF
       fonts:
         - asset: assets/fonts/SF-Pro-Text-Regular.otf
+          weight: 400
+        - asset: assets/fonts/SF-Pro-Text-Medium.otf
+          weight: 500
         - asset: assets/fonts/SF-Pro-Text-Semibold.otf
           weight: 600
-        - asset: assets/fonts/SF-Pro-Text-Regular.otf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
