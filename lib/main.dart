@@ -12,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const NearbyPlacesScreen());
+    return MaterialApp(home: const RealEstate());
   }
 }

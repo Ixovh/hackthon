@@ -18,7 +18,9 @@ class _RealEstateState extends State<RealEstate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(CupertinoIcons.left_chevron, size: 32),
           onPressed: () {
