@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/feature/home/screen/home_screen.dart';
+import 'package:hackathon/feature/real-estate/screen/real_estate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,12 +9,8 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
-      home: const HomeScreen(),
-    );
+    return MaterialApp(home: const RealEstate());
   }
 }
