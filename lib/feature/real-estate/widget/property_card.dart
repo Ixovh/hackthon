@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hackathon/feature/home/screen/home_screen.dart';
+
+import 'package:hackathon/feature/real-estate/screen/nearby_places.dart';
 
 class PropertyCard extends StatelessWidget {
   /// this widget is for creating the card
@@ -139,8 +140,7 @@ class PropertyCard extends StatelessWidget {
                   onTap: () {
                     Navigator.pushReplacement(
                       context,
-                      // TODO: redirect to real estate
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                      MaterialPageRoute(builder: (context) => NearbyPlacesScreen()),
                     );
                   },
                   child: Column(

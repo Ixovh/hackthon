@@ -329,4 +329,69 @@ class RealEstateController {
       },
     );
   }
+
+  final List<Map<String, dynamic>> categories = [
+      {"title": "All", "icon": null, "color": Colors.white},
+      {
+        "title": "Hospitals",
+        "icon": "assets/icons/hospital.svg",
+        "color": const Color(0xFFD9534F),
+      },
+      {
+        "title": "Schools",
+        "icon": "assets/icons/school.svg",
+        "color": const Color(0xFFF0C530),
+      },
+      {
+        "title": "Parks",
+        "icon": "assets/icons/park.svg",
+        "color": const Color(0xFF2DBE62),
+      },
+    ];
+
+    final List<Map<String, dynamic>> nearbyPlaces = [
+      {
+        'name': 'Yashfin Medical Center',
+        'icon': 'assets/icons/hospital.svg',
+        'color': const Color(0xFFD9534F),
+        'car': '5 min',
+        'walk': '12 min',
+      },
+      {
+        'name': 'Al Yasmin Park',
+        'icon': 'assets/icons/park.svg',
+        'color': const Color(0xFF2DBE62),
+        'car': '8 min',
+        'walk': '15 min',
+      },
+      {
+        'name': 'Ibn Roshd International Schools',
+        'icon': 'assets/icons/school.svg',
+        'color': const Color(0xFFF0C530),
+        'car': '15 min',
+        'walk': '26 min',
+      },
+      {
+        'name': 'Eram Care',
+        'icon': 'assets/icons/hospital.svg',
+        'color': const Color(0xFFD9534F),
+        'car': '18 min',
+        'walk': '32 min',
+      },
+      {
+        'name': 'Maward Restaurant',
+        'icon': 'assets/icons/restaurant.svg',
+        'color': const Color(0xFFFFA726),
+        'car': '21 min',
+        'walk': '37 min',
+      },
+      {
+        'name': 'Education International School',
+        'icon': 'assets/icons/school.svg',
+        'color': const Color(0xFFF0C530),
+        'car': '34 min',
+        'walk': '57 min',
+      },
+    ];
+
 }

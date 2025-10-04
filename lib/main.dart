@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/feature/home/screen/home_screen.dart';
+import 'package:hackathon/feature/real-estate/screen/nearby_places.dart';
 import 'package:hackathon/feature/real-estate/screen/real_estate.dart';
 
 void main() {
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const RealEstate());
+    return MaterialApp(home: const NearbyPlacesScreen());
   }
 }
