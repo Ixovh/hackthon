@@ -4,9 +4,9 @@
   <img src="assets/images/ExpatEase.png" alt="ExpatEase Logo" width="200"/>
 </div>
 
-## 📱 About ExpatEase
+## 📱 About XPatEase
 
-**ExpatEase** is a comprehensive Flutter mobile application designed to help expatriates navigate life in Saudi Arabia with ease. The app features **Ameen**, your intelligent AI assistant powered by Google's Gemini AI, who provides personalized guidance and support for various aspects of expat life.
+**XPatEase** is a comprehensive Flutter mobile application designed to help expatriates navigate life in Saudi Arabia with ease. The app features **Ameen**, your intelligent AI assistant powered by Google's Gemini AI, who provides personalized guidance and support for various aspects of expat life.
 
 ## Demo
 
