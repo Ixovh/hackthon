@@ -1,4 +1,4 @@
-# ExpatEase - Your AI-Powered Expat Assistant 🏠🤖
+# XpatEase - Your AI-Powered Expat Assistant 🏠🤖
 
 <div align="center">
   <img src="assets/images/ExpatEase.png" alt="ExpatEase Logo" width="200"/>
