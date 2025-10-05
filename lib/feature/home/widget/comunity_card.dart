@@ -9,7 +9,7 @@ class CommunityCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
+      width: 192,
       margin: const EdgeInsets.only(right: 12),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -17,7 +17,7 @@ class CommunityCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withValues(alpha:  0.05),
             blurRadius: 6,
             offset: Offset(0, 3),
           ),
@@ -26,7 +26,9 @@ class CommunityCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Top Row: Avatar + Name + Flag
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
                 radius: 18,
@@ -37,21 +39,27 @@ class CommunityCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Name + Flag
                     Row(
                       children: [
-                        Text(
-                          post.name,
-                          style: TextStyle(
-                            fontFamily: 'SF',
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                            color: Colors.black,
+                        Expanded(
+                          child: Text(
+                            post.name,
+                            style: TextStyle(
+                              fontFamily: 'SF',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                         SizedBox(width: 4),
-                        Image.asset(post.countryFlag, width: 18, height: 18),
+                        Image.asset(post.countryFlag, width: 16, height: 16),
                       ],
                     ),
+                    SizedBox(height: 2),
                     Text(
                       post.timeAgo,
                       style: TextStyle(
@@ -67,8 +75,12 @@ class CommunityCard extends StatelessWidget {
           ),
 
           SizedBox(height: 10),
+
+          // Content
           if (post.content.contains('.'))
             RichText(
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis,
               text: TextSpan(
                 children: [
                   TextSpan(
@@ -77,24 +89,19 @@ class CommunityCard extends StatelessWidget {
                       fontFamily: 'SF',
                       fontSize: 14,
                       color: Colors.black,
-                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-
                   TextSpan(
                     text: ' more',
                     style: TextStyle(
                       fontFamily: 'SF',
                       fontSize: 14,
                       color: Color(0xFF2DBE62),
-                      overflow: TextOverflow.ellipsis,
                     ),
-                    onEnter: (event) {},
                   ),
                 ],
               ),
             )
-
           else
             Text(
               post.content,

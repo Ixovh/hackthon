@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hackathon/feature/home/controller/home_cotroller.dart';
 import 'package:hackathon/feature/home/widget/promocard.dart';
 
+
 class DisplayPromoCard extends StatelessWidget {
   const DisplayPromoCard({
     super.key,

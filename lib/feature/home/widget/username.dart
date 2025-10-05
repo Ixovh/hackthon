@@ -27,7 +27,7 @@ class UserNamewidget extends StatelessWidget {
               ),
               children: [
                 TextSpan(
-                  text: "\nVikram Reddy!",
+                  text: "\nVikram!",
                   style: TextStyle(
                     fontFamily: 'SF',
                     fontWeight: FontWeight.w600,

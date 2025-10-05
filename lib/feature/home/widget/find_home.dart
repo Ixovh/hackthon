@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:flutter_svg/svg.dart';
-
 
 class FindHome extends StatelessWidget {
-/// this for card Roshn Group and blurring the image 
+  /// this for card Roshn Group and blurring the image
   const FindHome({super.key});
 
   @override
@@ -123,12 +121,13 @@ class FindHome extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
+
                       WidgetSpan(
                         alignment: ui.PlaceholderAlignment.middle,
-                        child: SvgPicture.asset(
-                          'assets/icons/arrow_right.svg',
-                          width: 15,
-                          height: 18,
+                        child: Image.asset(
+                          'assets/images/ArrowUp.png',
+                          width: 20,
+                          height: 23,
                         ),
                       ),
                     ],

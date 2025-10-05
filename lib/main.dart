@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/feature/home/screen/home_screen.dart';
+import 'package:hackathon/feature/splash/screen/splash_screen.dart';
+import 'package:provider/provider.dart';
+import 'feature/navBar/controller/navigation_controller.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
+
+const GEMINI_API_KEY = "AIzaSyDGZeklACKmxtLWTZ_UKmtTS04oIupcCF8";
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  Gemini.init(apiKey: GEMINI_API_KEY);
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => NavigationController(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
-      home: const HomeScreen(),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
   }
 }

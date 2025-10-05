@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:flutter_svg/flutter_svg.dart';
 
 class PromoCard extends StatelessWidget {
   /// this promocard is taking data from controller and rendering the UI
@@ -59,10 +58,10 @@ class PromoCard extends StatelessWidget {
                   children: [
                     WidgetSpan(
                       alignment: ui.PlaceholderAlignment.middle,
-                      child: SvgPicture.asset(
-                        'assets/icons/arrow_right.svg',
-                        width: 15,
-                        height: 18,
+                      child: Image.asset(
+                        'assets/images/ArrowUp.png',
+                        width: 20,
+                        height: 23,
                       ),
                     ),
                   ],

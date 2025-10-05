@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hackathon/feature/home/controller/home_cotroller.dart';
 import 'package:hackathon/feature/home/widget/comunity_card.dart';
 import 'package:hackathon/feature/home/widget/display_promocard.dart';
@@ -22,13 +21,12 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 100,
         titleSpacing: 0,
         backgroundColor: Colors.white,
@@ -45,8 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 border: Border.all(color: Color(0xFFEAEAEA), width: 2),
               ),
               child: Center(
-                child: SvgPicture.asset(
-                  'assets/icons/bell.svg',
+                child: Image.asset(
+                  'assets/images/Bell.png',
                   width: 18,
                   height: 19.5,
                 ),
@@ -57,13 +55,14 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: ListView(
         children: [
+          SizedBox(height: 20),
           Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 13),
             child: Text(
               'Picks For You',
               style: TextStyle(
                 fontFamily: 'SF',
-                fontSize: 28,
+                fontSize: 20,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -81,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   'Find your new home',
                   style: TextStyle(
                     fontFamily: 'SF',
-                    fontSize: 28,
+                    fontSize: 20,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -102,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Community highlights',
+                  'Top Feeds',
                   style: TextStyle(
                     fontFamily: 'SF',
                     fontWeight: FontWeight.w600,
@@ -112,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 InkWell(
                   onTap: () {},
                   child: Text(
-                    'see all',
+                    'See All',
                     style: TextStyle(
                       fontFamily: 'SF',
                       fontWeight: FontWeight.w400,
