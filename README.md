@@ -212,5 +212,5 @@ We welcome contributions from the community! Special thanks to our contributors:
 
 ---
 
-- **[GhadahAlhamdan](https://github.com/GhadahAlhamdan)** for her contributions to this project
+- **Thanks to [GhadahAlhamdan](https://github.com/GhadahAlhamdan)** for her contributions on this project
 
