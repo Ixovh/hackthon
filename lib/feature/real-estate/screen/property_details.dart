@@ -4,6 +4,7 @@ import 'package:hackathon/feature/real-estate/screen/nearby_places.dart';
 import 'package:hackathon/feature/real-estate/widget/contact_model_sheet.dart';
 import 'package:hackathon/feature/real-estate/widget/details_images.dart';
 import 'package:hackathon/feature/real-estate/widget/row_for_info_details.dart';
+import 'package:hackathon/feature/real-estate/widget/services_icon_list.dart';
 
 class PropertyDetailsScreen extends StatelessWidget {
   final String price = "30,000";
@@ -173,6 +174,113 @@ class PropertyDetailsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+
+                   SizedBox(height: 20),
+                    Row(
+                      children: [
+                        // Owner logo
+                        CircleAvatar(
+                          radius: 33,
+                          backgroundColor: Colors.black12,
+                          backgroundImage: AssetImage(
+                            'assets/icons/owner_logo.png',
+                          ),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            'Owner',
+                            style: TextStyle(
+                              fontFamily: 'SF',
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        // Reviews
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              'Reviews',
+                              style: TextStyle(
+                                fontFamily: 'SF',
+                                fontSize: 12,
+                                color: Color(0xFF7A7A7A),
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.star,
+                                  size: 12,
+                                  color: Color(0xFFFFC107),
+                                ),
+                                Icon(
+                                  Icons.star,
+                                  size: 12,
+                                  color: Color(0xFFFFC107),
+                                ),
+                                Icon(
+                                  Icons.star,
+                                  size: 12,
+                                  color: Color(0xFFFFC107),
+                                ),
+                                Icon(
+                                  Icons.star,
+                                  size: 12,
+                                  color: Color(0xFFFFC107),
+                                ),
+                                Icon(
+                                  Icons.star_border,
+                                  size: 12,
+                                  color: Color(0xFFFFC107),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 12),
+                    Divider(height: 1, color: Color(0xFFE6E6E6)),
+                    SizedBox(height: 8),
+
+                    // Services list
+                    Column(
+                      children: [
+                        ServicesIcon(
+                          iconPath: 'assets/icons/wifi.png',
+                          label: 'Wifi',
+                        ),
+                        ServicesIcon(
+                          iconPath: 'assets/icons/Oven.png',
+                          label: 'Kitchen',
+                        ),
+                        ServicesIcon(
+                          iconPath: 'assets/icons/WashingMachine.png',
+                          label: 'Washing machine',
+                        ),
+                        ServicesIcon(
+                          iconPath: 'assets/icons/SecurityCamera.png',
+                          label: 'Security cameras',
+                        ),
+                        ServicesIcon(
+                          iconPath: 'assets/icons/Elevator.png',
+                          label: 'Elevator',
+                        ),
+                        ServicesIcon(
+                          iconPath: 'assets/icons/Car.png',
+                          label: 'Parking spot',
+                        ),
+                      ],
+                    ),
+
+                    SizedBox(height: 8),
+                    Divider(height: 1, color: Color(0xFFE6E6E6)),
                   ],
                 ),
               ),
