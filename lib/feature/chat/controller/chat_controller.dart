@@ -1,4 +1,3 @@
-// lib/feature/chat/controller/chat_controller.dart
 import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class ChatController extends ChangeNotifier {
     _loadPdf();
   }
 
-  /// ✅ Scrolls to the bottom of the chat smoothly
+  ///  Scrolls to the bottom of the chat smoothly
   void scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (scrollController.hasClients) {
@@ -33,7 +32,7 @@ class ChatController extends ChangeNotifier {
     });
   }
 
-  /// ✅ Splits text into manageable chunks for Gemini processing
+  /// Splits text into manageable chunks for Gemini processing
   List<String> splitTextIntoChunks(String text, {int chunkSize = 5000}) {
     List<String> chunks = [];
     int start = 0;
@@ -45,7 +44,7 @@ class ChatController extends ChangeNotifier {
     return chunks;
   }
 
-  /// 📄 Downloads and extracts text from the HRSD PDF document
+  ///  Downloads and extracts text from the HRSD PDF document
   Future<void> _loadPdf() async {
     loadingDoc = true;
     notifyListeners();
@@ -131,7 +130,7 @@ class ChatController extends ChangeNotifier {
     return top;
   }
 
-  /// 💬 Sends user question and gets Gemini response
+  ///  Sends user question and gets Gemini response
   void sendMessage() {
     final question = textController.text.trim();
     if (question.isEmpty) return;

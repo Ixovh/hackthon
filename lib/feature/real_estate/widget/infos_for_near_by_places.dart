@@ -23,8 +23,24 @@ class InfosForNearByPlaces extends StatelessWidget {
           ),
           child: Row(
             children: [
-              // Icon circle
-              Center(child: Image.asset(place['icon'], width: 28, height: 28)),
+              // Icon circle with colored background
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: place['color'],
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                padding: const EdgeInsets.all(8),
+                child: Image.asset(
+                  place['icon'],
+                  width: 24,
+                  height: 24,
+                  fit: BoxFit.contain,
+                  color: Colors.white,
+                  colorBlendMode: BlendMode.srcIn,
+                ),
+              ),
               SizedBox(width: 15),
 
               // Info text

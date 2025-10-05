@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:hackathon/feature/real_estate/controller/real_estate_controller.dart';
 
 class TopLengendWithMap extends StatelessWidget {
-  /// this will render the UI for map with top centre legend 
-  const TopLengendWithMap({
-    super.key,
-    required this.controller,
-  });
+  /// this will render the UI for map with top centre legend
+  const TopLengendWithMap({super.key, required this.controller});
 
   final RealEstateController controller;
 
@@ -19,18 +15,12 @@ class TopLengendWithMap extends StatelessWidget {
       right: 0,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15,
-          vertical: 6,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
         child: Row(
           children: controller.categories.map((category) {
             return Container(
               margin: const EdgeInsets.only(right: 10),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 14,
-                vertical: 8,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
               decoration: BoxDecoration(
                 color: category['title'] == 'All'
                     ? Color(0xFF2DBE62)
@@ -40,19 +30,31 @@ class TopLengendWithMap extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 2,
-                    offset:    Offset(0, 1),
+                    offset: Offset(0, 1),
                   ),
                 ],
               ),
               child: Row(
                 children: [
                   if (category['icon'] != null) ...[
-                    Image.asset(
-                      category['icon'],
+                    Container(
                       width: 28,
                       height: 28,
+                      decoration: BoxDecoration(
+                        color: category['color'],
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      padding: const EdgeInsets.all(6),
+                      child: Image.asset(
+                        category['icon'],
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.contain,
+                        color: Colors.white,
+                        colorBlendMode: BlendMode.srcIn,
+                      ),
                     ),
-                       SizedBox(width: 6),
+                    SizedBox(width: 6),
                   ],
                   Text(
                     category['title'],

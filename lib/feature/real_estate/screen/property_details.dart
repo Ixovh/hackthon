@@ -20,23 +20,16 @@ class PropertyDetailsScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
+          // physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //  Image carousel (instead of stacking 3 large images)
-              SizedBox(
-                height: 250,
-                child: PageView(
-                  children:  [
-                    DetailsImages(path: 'assets/images/room.png'),
-                    DetailsImages(path: 'assets/images/room2.png'),
-                    DetailsImages(path: 'assets/images/room3.png'),
-                  ],
-                ),
-              ),
+              DetailsImages(path: 'assets/images/room.png'),
+              DetailsImages(path: 'assets/images/room2.png'),
+              DetailsImages(path: 'assets/images/room3.png'),
 
-              // 🧾 Info Card Section
+              //  Info Card Section
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(

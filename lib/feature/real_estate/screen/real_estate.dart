@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hackathon/feature/home/screen/home_screen.dart';
+import 'package:hackathon/feature/navBar/screen/navigation_bar.dart';
 import 'package:hackathon/feature/real_estate/controller/real_estate_controller.dart';
 import 'package:hackathon/feature/real_estate/widget/property_card.dart';
 
@@ -26,7 +26,7 @@ class _RealEstateState extends State<RealEstate> {
           onPressed: () {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
+              MaterialPageRoute(builder: (context) => NavigationScreen()),
             );
           },
         ),

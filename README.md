@@ -11,7 +11,11 @@
 ## Demo
 
 
-**YouTube Demo Link:** [Watch the app demo here](https://youtube.com/@expat-ease)
+**YouTube Demo Link:** [Watch the app demo here](https://youtube.com/shorts/e_0SLHW9PfM?feature=share)
+
+## Design
+
+**Figma Design Link:** [View the app design here](https://www.figma.com/design/cLLJ8uBg9EqWOwMCbM1JEg/Tuwaiq-Hackathon?node-id=19-2&t=BjISXW7CgyHk4Ugr-1)
 
 ## ✨ Key Features
 
@@ -116,7 +120,6 @@ dependencies:
   circle_nav_bar: ^2.2.0          # Custom navigation bar
   provider: ^6.0.5                # State management
   google_fonts: ^4.0.4            # Typography
-  flutter_svg: 2.0.9             # SVG support
   http: ^0.13.6                  # HTTP requests
   smooth_page_indicator: ^1.2.1  # Page indicators
 ```
