@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'feature/navBar/controller/navigation_controller.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 
-const GEMINI_API_KEY = "AIzaSyDGZeklACKmxtLWTZ_UKmtTS04oIupcCF8";
+const GEMINI_API_KEY = "Your apikey";
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
